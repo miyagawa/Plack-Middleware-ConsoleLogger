@@ -34,7 +34,7 @@ sub generate_js {
     $js .= q/console.group("/ . $self->group . q/");/ if $self->group;
 
     for my $log (@$logs) {
-        my $level = $log->{level};
+        my $level = $self->_validate_level($log->{level});
         $level = "error" if $level eq 'fatal';
         my $message = $log->{message};
         $message =~ s/\"/\\"/g;
@@ -44,6 +44,16 @@ sub generate_js {
     $js .= "console.groupEnd();" if $self->group;
     $js .= "</script>";
     $js;
+}
+
+sub _validate_level {
+    my ($self, $level) = @_;
+    return "debug" if !$level;
+    if (grep {/$level/} (qw/warn debug error info fatal/) {
+        return $level;
+    }else{
+        return "debug";
+    }
 }
 
 1;
