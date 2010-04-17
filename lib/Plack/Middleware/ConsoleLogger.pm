@@ -49,7 +49,7 @@ sub generate_js {
 sub _validate_level {
     my ($self, $level) = @_;
     return "debug" if !$level;
-    if (grep {/$level/} (qw/warn debug error info fatal/) {
+    if (grep {/$level/} (qw/warn debug error info fatal/)) {
         return $level;
     }else{
         return "debug";
