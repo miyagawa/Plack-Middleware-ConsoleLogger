@@ -1,4 +1,7 @@
 Revision history for Perl extension Plack::Middleware::ConsoleLogger
 
+0.02  Wed May  5 17:51:19 PDT 2010
+      - Fixed deps
+
 0.01  Wed Jan 20 15:15:30 2010
-        - original version
+      - original version
