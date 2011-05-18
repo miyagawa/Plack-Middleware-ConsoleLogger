@@ -6,6 +6,8 @@ use Plack::Util::Accessor qw(group);
 use 5.008001;
 our $VERSION = '0.02';
 
+use JavaScript::Value::Escape;
+
 sub call {
     my($self, $env) = @_;
 
@@ -39,8 +41,7 @@ sub generate_js {
     for my $log (@$logs) {
         my $level = $self->_validate_level($log->{level});
         $level = "error" if $level eq 'fatal';
-        my $message = $log->{message};
-        $message =~ s/\"/\\"/g;
+        my $message = javascript_value_escape($log->{message});
         $js .= qq/console.$level("$message");/;
     }
 

@@ -4,6 +4,7 @@ all_from 'lib/Plack/Middleware/ConsoleLogger.pm';
 readme_from 'lib/Plack/Middleware/ConsoleLogger.pm';
 requires 'Plack', 0.99;
 requires 'parent';
+requires 'JavaScript::Value::Escape';
 build_requires 'Test::More';
 test_requires 'Test::Requires';
 author_tests('xt');
