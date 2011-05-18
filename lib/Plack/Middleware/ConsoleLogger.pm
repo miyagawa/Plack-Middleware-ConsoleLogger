@@ -4,7 +4,7 @@ use parent qw(Plack::Middleware);
 use Plack::Util::Accessor qw(group);
 
 use 5.008001;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use JavaScript::Value::Escape;
 
