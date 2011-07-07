@@ -42,6 +42,8 @@ sub generate_js {
         my $level = $self->_validate_level($log->{level});
         $level = "error" if $level eq 'fatal';
         my $message = javascript_value_escape($log->{message});
+        $message =~ s/([^\x00-\xff])/sprintf "\\u%04x", ord($1)/eg;
+        utf8::downgrade($message);
         $js .= qq/console.$level("$message");/;
     }
 
