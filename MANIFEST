@@ -18,6 +18,7 @@ META.yml
 README
 t/00_compile.t
 t/01_basic.t
+t/02_utf8.t
 xt/perlcritic.t
 xt/pod.t
 xt/podspell.t
