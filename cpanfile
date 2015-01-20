@@ -1,4 +1,4 @@
-requires 'JavaScript::Value::Escape';
+requires 'JavaScript::Value::Escape', '0.07';
 requires 'Plack', '0.99';
 requires 'parent';
 requires 'perl', '5.008001';
