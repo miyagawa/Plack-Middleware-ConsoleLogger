@@ -44,7 +44,7 @@
       },
       "runtime" : {
          "requires" : {
-            "JavaScript::Value::Escape" : "0",
+            "JavaScript::Value::Escape" : "0.07",
             "Plack" : "0.99",
             "parent" : "0",
             "perl" : "5.008001"
@@ -63,7 +63,7 @@
          "web" : "https://github.com/miyagawa/Plack-Middleware-ConsoleLogger"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_contributors" : [
       "franck cuny <franck@lumberjaph.net>",
       "Jay Lenti <jlenti@riccagroup.com>",
