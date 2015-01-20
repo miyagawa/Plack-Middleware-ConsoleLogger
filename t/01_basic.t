@@ -34,7 +34,7 @@ test_psgi $app, sub {
     my $res = $cb->( GET "/" );
     like $res->content, qr/console\.debug/, 'content matched';
     like $res->content, qr/console\.error/, 'content matched';
-    like $res->content, qr/Foo\\u0010Bar/, "newline escaped";
+    like $res->content, qr/Foo\\u000aBar/, "newline escaped";
 };
 
 done_testing;
