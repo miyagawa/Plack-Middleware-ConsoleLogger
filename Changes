@@ -1,5 +1,7 @@
 Revision history for Perl extension Plack::Middleware::ConsoleLogger
 
+{{$NEXT}}
+
 0.04  Thu Jul  7 12:53:41 PDT 2011
       - Encode high bit characters with \uXXXX (#1)
 
